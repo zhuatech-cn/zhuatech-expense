@@ -61,3 +61,7 @@ docker compose up --build
 </p>
 
 关键词：知华科技 Expense、企业费控系统、费用报销、发票管理、预算控制、Java 报销系统、Vue 费控平台、上海软件定制开发。
+
+## 重复报销识别
+
+新增 `POST /api/expense/insights/duplicate-claim`，根据商户、金额和消费日期与历史报销候选进行相似度匹配，返回可信度、命中单据以及 `CLEAR`、`REVIEW` 或 `BLOCK` 决策。
